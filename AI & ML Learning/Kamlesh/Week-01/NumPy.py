@@ -38,3 +38,9 @@ print(arr3, type(arr3))
 print(arr3.ndim,"D") 
 print()
 
+# Create NumPy N-D Array using ndmin function
+arr5 = np.array([1,2,3,4,5], ndmin=5)
+print("N-D Array:-")
+print(arr5, type(arr5))
+print(arr5.ndim,"D") 
+print()
