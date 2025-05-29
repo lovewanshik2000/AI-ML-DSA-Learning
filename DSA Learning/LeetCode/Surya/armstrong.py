@@ -10,3 +10,6 @@ def armstrong_number(n):
     return (total == n)
 
 print(armstrong_number(153))
+
+'''Time Complexity -->>	O(log₁₀(n))
+Space Complexity -->>	O(1)'''
