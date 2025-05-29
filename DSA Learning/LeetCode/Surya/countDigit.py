@@ -32,6 +32,7 @@ def countdigit(n):
         return 1  # log10(0) is undefined
     return int(log10(abs(n)) + 1)
 
+print(len(str(abs(2345)))) # output :4
 print (countdigit(789)) # output : 3
 print (countdigit(0)) # output : 1
 print (countdigit(-789)) # output : 3
@@ -39,4 +40,5 @@ print (countdigit(-789)) # output : 3
 '''🔁 Comparison:
 Method	Time Complexity
 int(log10(abs(n)) + 1) ==>> O(1)
+len(str(abs(n))) ==>> O(log₁₀(n))
 Manual digit count using loop ==>> O(log₁₀(n))'''
