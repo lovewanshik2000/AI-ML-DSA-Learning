@@ -4,6 +4,18 @@ It provides fast operations on arrays and matrices.
 It is essential for scientific computing in Python.
 To create an ndarray, we can pass a list, tuple or any array-like object into the array() method, 
 and it will be converted into an ndarray
+
+**indexing**
+Array indexing is the same as accessing an array element.
+
+**Slicing arrays**
+Slicing in python means taking elements from one given index to another given index.
+
+We pass slice instead of index like this: [start:end].
+We can also define the step, like this: [start:end:step].
+
+arr[row_start:row_end, col_start:col_end] → slicing a submatrix.
+arr[row_index, col_index] → single value.
 '''
 import numpy as np
 
@@ -17,6 +29,7 @@ print("1D array:", arr)
 print("Type:", type(arr))
 print("Dimensions:", arr.ndim)
 print("-" * 50)
+print("slicing",arr[1:4:2])
 
 # 📌 Another 1-D array (using tuple)
 arr1 = np.array((1, 2, 3, 4, 5, 8))
@@ -67,6 +80,24 @@ print("arr[1, 1:4] → Row 1, columns 1 to 3:\n", arr[1, 1:4])
 # [7 8 9]
 print("-" * 50)
 
+# 1️⃣ Slice a part of the array (this is a VIEW)
+view_arr = arr[0:2, 1:4]
+print("View (arr[0:2, 1:4]):\n", view_arr)
+
+# Modify the view
+view_arr[0, 0] = 999
+print("Modified View:\n", view_arr)
+print("Array After View Modification:\n", arr)  # arr is also modified!
+print("-" * 50)
+
+# 2️⃣ Create a COPY of a slice
+copy_arr = arr[0:2, 2:5].copy()
+print("Copy (arr[0:2, 2:5].copy()):\n", copy_arr)
+
+# Modify the copy
+copy_arr[0, 0] = 888
+print("Modified Copy:\n", copy_arr)
+print("Array After Copy Modification (original remains unchanged):\n", arr)
 
 # 📌 Create a 3-D array
 arr = np.array([
