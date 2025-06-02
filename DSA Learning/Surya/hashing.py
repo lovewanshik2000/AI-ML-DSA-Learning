@@ -8,12 +8,12 @@ for very fast storing and retrieving.'''
 n = [5,3,2,2,1,5,5,7,5,10]
 m = [10,112,1,9,5,67,2]
 # METHOD :1
-# for num in m:
-#     count=0
-#     for x in n:
-#         if num == x:
-#             count= count+1
-#     print(f"{num} appears {count} time(s) in n")
+for num in m:
+    count=0
+    for x in n:
+        if num == x:
+            count= count+1
+    print(f"{num} appears {count} time(s) in n")
 
 ''' time complexity :- O(MxN)
 What does this mean practically?
@@ -27,14 +27,14 @@ This is too large to run in any reasonable time on modern computer
 
 # METHOD :2
 ''' we have to make optimal solution here we create one list of length is (n+1) because 1<=n[i]<=10'''
-# hash_list=[0]*11
-# for num in n:
-#     hash_list[num]=hash_list[num]+1
-# for x in m:
-#     if x<1 or x>10:
-#         print(0)
-#     else:
-#         print(hash_list[x])
+hash_list=[0]*11
+for num in n:
+    hash_list[num]=hash_list[num]+1
+for x in m:
+    if x<1 or x>10:
+        print(0)
+    else:
+        print(hash_list[x])
 ''' time complexity :- O(M+N)
 What does this mean practically?
 If M and N are large (like up to 10⁸), the total operations can be up to:
