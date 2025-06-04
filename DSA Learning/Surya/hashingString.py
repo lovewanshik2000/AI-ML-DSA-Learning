@@ -23,3 +23,12 @@ for ch in s:
     hash_list[ch]=hash_list.get(ch,0)+1
 for h in q:
     print(hash_list.get(h,0))
+
+''' for ch in s: O(n), where n = len(s)
+    for h in q: O(m), where m = len(q)
+Inside both loops: dict.get() and assignment are O(1) on average
+Total Time Complexity = O(n + m)
+
+In the worst case, all characters in s are unique
+⇒ up to O(k) space, where k = number of unique characters in s
+Total Space Complexity = O(k)'''

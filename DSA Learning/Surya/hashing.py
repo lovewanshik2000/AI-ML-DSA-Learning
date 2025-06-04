@@ -49,4 +49,5 @@ for num in n :
     freq_dict[num]=freq_dict.get(num,0)+1
 for x in m :
     print(f"{x} appears {freq_dict.get(x, 0)} time(s) in n")
-    print (freq_dict.get(x, 0))
+    freq_dict[x]=freq_dict.get(x,0)
+    print(freq_dict[x])
