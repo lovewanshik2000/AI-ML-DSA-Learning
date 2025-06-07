@@ -1,4 +1,4 @@
-''' Print numbers from 1 to N using both head and tail recursion.'''
+ ''' Print numbers from 1 to N using both head and tail recursion.'''
 '''✅ Head Recursion'''
 def headfunc(i,n):
     if i>n:
