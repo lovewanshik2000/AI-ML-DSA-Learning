@@ -20,5 +20,8 @@ def Selectionsortdesc(arr):
         arr[i],arr[max_index]=arr[max_index],arr[i]
     return arr
 p=[12,3,7,5,6]
-print(Selectionsort(p)) # ascending order
-print(Selectionsortdesc(p)) # descending order
+print(Selectionsort(p)) # ascending order [3, 5, 6, 7, 12]
+print(Selectionsortdesc(p)) # descending order [12, 7, 6, 5, 3]
+
+'''tc:-0(N(N+1)/2)~O(N**2)
+    SC:-O(1) number of variable not change '''
