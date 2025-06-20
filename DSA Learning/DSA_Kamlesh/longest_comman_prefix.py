@@ -19,5 +19,5 @@ def longestCommanPrefix(strgs):
     else:
         return ""
 
-l = ["Flower", "kiow", "Flight"]
+l = ["Flower", "flow", "Flight"]
 print(longestCommanPrefix(l))
