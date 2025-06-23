@@ -34,15 +34,17 @@
             margin-top: 20px;
             font-size: 22px;
             font-weight: bold;
-            color: #007bff;
+            color: {% if "ho jayega" in result %}#28a745{% else %}#dc3545{% endif %};
+            /* green for success, red for failure */
         }
 
         .back-link {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 30px;
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
+            font-size: 16px;
         }
 
         .back-link:hover {
@@ -55,7 +57,14 @@
         <h2>📊 Prediction Result</h2>
         <p><strong>CGPA:</strong> {{ cgpa }}</p>
         <p><strong>IQ:</strong> {{ iq }}</p>
-        <p class="result">{{ result }}</p>
+        <p class="result">
+            {{ result }} 
+            {% if "ho jayega" in result %}
+                🎉
+            {% else %}
+                😔
+            {% endif %}
+        </p>
         <a href="/" class="back-link">🔁 Try Another Prediction</a>
     </div>
 </body>
